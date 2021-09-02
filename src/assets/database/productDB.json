@@ -1,0 +1,150 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Waffles con miel de aveja",
+      "price": 12500,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "https://images.pexels.com/photos/357573/pexels-photo-357573.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "rate": 4.8
+    },
+    {
+      "id": 2,
+      "name": "Postre de chocolate",
+      "price": 22000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "rate": 4.3
+    },
+    {
+      "id": 3,
+      "name": "Postre de chocolate con mani salteado",
+      "price": 13000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "https://images.pexels.com/photos/1998635/pexels-photo-1998635.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "rate": 4.0
+    },
+    {
+      "id": 4,
+      "name": "Ensalada con almendras",
+      "price": 24000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "https://images.pexels.com/photos/3662126/pexels-photo-3662126.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "rate": 4.8
+    },
+    {
+      "id": 5,
+      "name": "Pastas alfredo con chorizo ahumado",
+      "price": 26000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "rate": 4.2
+    },
+    {
+      "id": 6,
+      "name": "Pizza Napolitanada con chorizo costenio x 2 personas",
+      "price": 33000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "https://images.pexels.com/photos/2147491/pexels-photo-2147491.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "rate": 3.5
+    },
+    {
+      "id": 7,
+      "name": "Chuzo Especial Gourmet",
+      "price": 28000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "https://images.pexels.com/photos/2641886/pexels-photo-2641886.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "rate": 4.0
+    },
+    {
+      "id": 7,
+      "name": "Sushi Yamete Kudasai Gourmet",
+      "price": 14000,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "https://images.pexels.com/photos/7245468/pexels-photo-7245468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "rate": 5.0
+    }
+  ],
+  "offers": [
+    {
+      "id": 1,
+      "name": "Offers 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "https://www.easypromosapp.com/blog/wp-content/uploads/header_ideas_de_promociones_para_restaurantes.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Offers 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "https://www.easypromosapp.com/blog/wp-content/uploads/header_ideas_promociones_mes_patrio.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Offers 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "https://www.pandaancha.mx/plds/articulos/9c9b76e3c085d6e942f251d6bd2354cf302771847.png"
+    },
+    {
+      "id": 4,
+      "name": "Offers 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "https://s3-sa-east-1.amazonaws.com/api-lac.production/images/discount_images/2021-06-01/a016da8bb378208deb77927f36b7a4d3.png"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Category 1"
+    },
+    {
+      "id": 2,
+      "name": "Category 2"
+    },
+    {
+      "id": 3,
+      "name": "Category 3"
+    },
+    {
+      "id": 4,
+      "name": "Category 4"
+    }
+  ],
+  "sponsorship": [
+    {
+      "id": 1,
+      "name": "sun",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1542501474l/42854557._SX318_.jpg"
+    },
+    {
+      "id": 2,
+      "name": "mc",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "https://wersm.com/wp-content/uploads/2020/03/wersm-mcdonalds-brazil-socia-distancing-fb.jpg"
+    },
+    {
+      "id": 3,
+      "name": "coke",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "https://i.ytimg.com/vi/3y0atO2QE_I/maxresdefault.jpg"
+    },
+    {
+      "id": 4,
+      "name": "sun",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1542501474l/42854557._SX318_.jpg"
+    },
+    {
+      "id": 5,
+      "name": "mc",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "https://wersm.com/wp-content/uploads/2020/03/wersm-mcdonalds-brazil-socia-distancing-fb.jpg"
+    },
+    {
+      "id": 6,
+      "name": "coke",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "https://i.ytimg.com/vi/3y0atO2QE_I/maxresdefault.jpg"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Store Products</ion-title>
+  </ion-toolbar>
+  <ion-toolbar class="ion-padding">
+    <ion-searchbar
+      mode="ios"
+      placeholder="Que quieres comer?"
+      animated
+      [(ngModel)]="filterProduct"
+      [debounce]="250"
+      showCancelButton="focus"
+    ></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header mode="ios">
+      <ion-label>Listado de Productos</ion-label>
+    </ion-list-header>
+    <ion-grid fixed>
+      <ion-row
+        (click)="presentModal(product)"
+        *ngFor="let product of products | async | filter : filterProduct: 'productName'"
+      >
+        <ion-col size="12">
+          <ion-item button [detail]="false">
+            <ion-thumbnail slot="end">
+              <img class="product__img" [src]="product.img" />
+            </ion-thumbnail>
+            <ion-label>
+              <h3>{{ product.productName}}</h3>
+              <p>{{ product.price | currency: "COP"}}</p>
+              <p>
+                4.5
+                <ion-icon color="warning" name="star"></ion-icon>
+              </p>
+            </ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+
+  <ion-fab
+    [class.animate__infinite]="cartCounter"
+    vertical="bottom"
+    horizontal="end"
+  >
+    <ion-fab-button routerLink="cart">
+      <ion-icon name="cart"></ion-icon>
+      <ion-text color="light"> {{ cartCounter }}</ion-text>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

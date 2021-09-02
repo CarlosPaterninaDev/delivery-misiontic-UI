@@ -1,0 +1,18 @@
+.product-container {
+  //   background-color: var(--ion-color-primary);
+}
+
+.product__img {
+  height: 35%;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+  border-top-right-radius: 80px 80px;
+}
+
+.product__detail {
+  position: relative;
+  height: 100vh;
+  border-top-right-radius: 80px 80px;
+  background-color: var(--ion-card-background);
+}

@@ -1,0 +1,41 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>products</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides [options]="slidesOptions" mode="ios" pager="ios">
+    <ion-slide
+      class="image-slide"
+      [style]=" ( off.img  | domSanitizer) "
+      *ngFor="let off of offers | async"
+    >
+    </ion-slide>
+  </ion-slides>
+
+  <ion-list>
+    <ion-list-header mode="ios">
+      <ion-label>Tiendas</ion-label>
+    </ion-list-header>
+    <ion-item
+      routerLink="store-product/{{ store.storeId}}"
+      *ngFor="let store of stores | async "
+      lines="none"
+    >
+      <ion-avatar slot="start">
+        <img
+          class="sponsor__img"
+          src='{{ store.img || "https://cdn.icon-icons.com/icons2/1526/PNG/512/shop_106574.png"}}'
+        />
+      </ion-avatar>
+      <ion-label>
+        <h3>{{store.name | titlecase}}</h3>
+        <p>{{ store.description}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

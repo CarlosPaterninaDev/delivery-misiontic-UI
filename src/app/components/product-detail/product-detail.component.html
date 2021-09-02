@@ -1,0 +1,84 @@
+<div class="product-container">
+  <ion-header class="ion-no-border">
+    <ion-toolbar color="primary">
+      <ion-buttons slot="end">
+        <ion-button (click)="toggleFavorite()">
+          <ion-icon
+            slot="icon-only"
+            ios="star-outline"
+            md="star-sharp"
+          ></ion-icon>
+        </ion-button>
+        <ion-button (click)="socialShare()">
+          <ion-icon
+            slot="icon-only"
+            ios="share-social-outline"
+            md="share-social-sharp"
+          ></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="ion-padding product__detail">
+    <img class="product__img" [src]="product?.img" [alt]="product?.name" />
+
+    <div class="ion-padding">
+      <ion-label>
+        <ion-list-header mode="ios">
+          <ion-label>{{ product?.name }}</ion-label>
+        </ion-list-header>
+
+        <p>{{ product?.description }}</p>
+
+        <ion-text color="secondary">
+          <p>{{ product?.price | currency: "COP" }}</p>
+        </ion-text>
+      </ion-label>
+
+      <ion-item lines="full">
+        <ion-button
+          (click)="onHandleQuantity(+1)"
+          slot="icon-only"
+          slot="start"
+        >
+          <ion-icon slot="icon-only" name="add"></ion-icon>
+        </ion-button>
+        <ion-input
+          type="number"
+          readonly
+          [value]="product?.count"
+          placeholder="cantidad"
+        ></ion-input>
+        <ion-button
+          [disabled]="product?.count === 0"
+          (click)="onHandleQuantity(-1)"
+          slot="icon-only"
+          slot="start"
+        >
+          <ion-icon slot="icon-only" name="remove"></ion-icon>
+        </ion-button>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-input
+          type="text"
+          readonly
+          [value]="product?.total | currency: 'COP'"
+          placeholder="Total compra"
+        ></ion-input>
+      </ion-item>
+    </div>
+  </div>
+</div>
+
+<ion-fab
+  (click)="addCart()"
+  *ngIf="product?.count"
+  class="animate__animated animate__pulse animate__infinite"
+  vertical="bottom"
+  horizontal="end"
+>
+  <ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

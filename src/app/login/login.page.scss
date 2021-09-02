@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .login {
+    border-radius: 30px;
+    max-height: 500px;
+    min-height: 70%;
+    width: 80%;
+    max-width: 500px;
+  }
+
+  .button-login {
+    width: 80%;
+    font-size: 1em;
+    margin: 20px auto;
+  }
+}

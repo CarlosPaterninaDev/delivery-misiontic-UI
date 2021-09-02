@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button
+        mode="md"
+        icon="chevron-back"
+        text=""
+        defaultHref="/tabs/products"
+      ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ng-template #empty>
+    <div class="empty">
+      <img src="/assets/empty_cart.svg" alt="" srcset="" />
+      <p>No hay productos agregados</p>
+
+      <ion-chip routerLink="/tabs/products" color="secondary">
+        <ion-icon name="bag-handle"></ion-icon>
+        <ion-label>Llevame a comprar</ion-label>
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-chip>
+    </div>
+  </ng-template>
+
+  <ion-list *ngIf="productsCart.length; else empty">
+    <ion-list-header mode="ios">
+      <ion-label>Carrito de compras</ion-label>
+    </ion-list-header>
+
+    <ion-grid fixed>
+      <ion-list-header mode="ios">
+        <ion-text *ngIf="showButtonPay" color="primary">
+          <p>Productos seleccionado: {{cantidadProductos}}</p>
+        </ion-text>
+        <ion-text *ngIf="!showButtonPay" color="success">
+          <p>Compra realizada:</p>
+        </ion-text>
+      </ion-list-header>
+      <ion-row *ngFor="let product of productsCart; let i = index">
+        <ion-col size="12">
+          <ion-list #list>
+            <ion-item-sliding>
+              <ion-item button>
+                <ion-thumbnail slot="end">
+                  <img class="product__img" [src]="product.img" />
+                </ion-thumbnail>
+                <ion-label>
+                  <h2>
+                    {{ product.name}}
+                    <p>cantidad x {{product.quantity }}</p>
+                  </h2>
+                  <p>{{product.price | currency: "COP" }}</p>
+                  <h3>Subtotal {{ product.total | currency: "COP"}}</h3>
+                </ion-label>
+              </ion-item>
+              <ion-item-options (ionSwipe)="removeProduct(i)" side="end">
+                <ion-item-option expandable (click)="removeProduct(i)">
+                  <p>Quitar producto</p>
+                  <ion-icon slot="icon-only" name="trash"></ion-icon>
+                </ion-item-option>
+              </ion-item-options>
+            </ion-item-sliding>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content>
+
+<ion-footer mode="ios" *ngIf="productsCart.length" translucent>
+  <ion-toolbar color="light">
+    <ion-title class="footer-text" *ngIf="showButtonPay"
+      >Total a pagar {{totalCompra | currency: "COP"}}</ion-title
+    >
+    <ion-title class="footer-text" *ngIf="!showButtonPay">
+      No. de Orden {{ noOrder }}</ion-title
+    >
+  </ion-toolbar>
+  <ion-toolbar
+    class="footer-text"
+    *ngIf="showButtonPay"
+    (click)="pay()"
+    color="primary"
+  >
+    <ion-title>Pagar <ion-icon name="cash-outline"></ion-icon></ion-title>
+  </ion-toolbar>
+</ion-footer>
