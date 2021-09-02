@@ -1,0 +1,7 @@
+{
+  "name": "deliverytic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
